@@ -6,7 +6,7 @@ const methodOverride = require('method-override');
 const redis = require('redis');
 
 //create redis client
-let client = redis.createClient();
+let client = redis.createClient(3000, '127.0.0.1');
 
 client.on('connect', function() {
   console.log('connected to redis...');
